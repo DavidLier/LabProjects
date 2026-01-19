@@ -1,0 +1,3 @@
+This is the real time ECG Analysis Tool. Visually what it looks like can be seen in the PNG, which is a small window that appears and begins to a rerendering of the ECG seen on the BIOPAC software, then when the R peak crosses a threshold it sends UDP signals to the other device notifying when to display stimulus according to our specific paradigms need. The thresholds can be adjusted while the softwares open.
+
+I decided to code it in Cpp because I needed to screen scrape and that can be VERY slow in python and java.
