@@ -81,9 +81,7 @@ class GameScene():
         
         pygame.draw.rect(screen, pygame.Color(30, 30, 30, 255), pygame.Rect(0, 0, this.width, this.height), width=10);
 
-        for pair in this.currentCardSets:
-            if (pair.active == False):
-                this.currentCardSets.remove(pair);
+        this.currentCardSets = [p for p in this.currentCardSets if p.active];
         
         if (len(this.currentCardSets) == 0):
             this.updateDisplayedCardSets();
@@ -101,7 +99,7 @@ class GameScene():
         this.currentCards = this.remainingCards[:int(this.cardsPerRound/2)];
         this.remainingCards = this.remainingCards[int(this.cardsPerRound/2):];
 
-        if (len(this.remainingCards) <= 0):
+        if (len(this.currentCards) <= 0):
             this.nextScene = EndScene(this.width, this.height);
             return;
 
