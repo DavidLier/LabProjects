@@ -1,0 +1,1 @@
+Quick first version of a card flipping memory game with some placeholder face images. Works with experiment builder to ensure correct stimulus from game are presented later when participating in the paradigm. 
